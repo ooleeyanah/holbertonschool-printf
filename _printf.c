@@ -29,7 +29,7 @@ count += f(args);
 else
 {
 write(1, "%", 1);
-write (1, &format[i], 1);
+write(1, &format[i], 1);
 count += 2;
 }
 }
