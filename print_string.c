@@ -1,3 +1,6 @@
+#include "main.h"
+#include <stdarg.h>
+#include <unistd.h>
 /**
  * print_string - prints string
  * @args: arguments
