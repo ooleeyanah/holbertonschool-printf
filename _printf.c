@@ -15,8 +15,12 @@ va_start(args, format);
 while (format[i])
 {
 if (format[i] == '%')
+{ i++;
+if (format[i] == '\0')
 {
-i++;
+va_end(args);
+return (-1);
+}
 if (format[i] == '%')
 {
 count += print_percent();
