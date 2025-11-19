@@ -10,5 +10,7 @@ if (c == 'c')
 return (print_char);
 if (c == 's')
 return (print_string);
-return (NULL);
+ if (c == 'd' || c == 'i')
+   return (print_int);
+ return (NULL);
 }
