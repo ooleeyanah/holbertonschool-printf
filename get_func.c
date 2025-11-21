@@ -12,5 +12,7 @@ if (c == 's')
 return (print_string);
  if (c == 'd' || c == 'i')
    return (print_int);
+ if (c == 'b')
+   return (print_binary);
  return (NULL);
 }
