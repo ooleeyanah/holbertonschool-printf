@@ -13,7 +13,7 @@ return (print_string);
  if (c == 'd' || c == 'i')
    return (print_int);
  if (c == 'u')
-   return (print_unsigned)
+   return (print_unsigned);
      if (c == 'o')
        return (print_octal);
  if (c == 'x')
