@@ -2,17 +2,20 @@
 #define _MAIN_H_
 #include <stdarg.h>
 #include <unistd.h>
+typedef struct specifier
+{
+  char spec;
+  int (*f)(va_list, char *, int *, int *);
+} specifier_t;
 int _printf(const char *format, ...);
-int print_char(va_list args);
-int print_string(va_list args);
-int print_int(va_list args);
-int print_percent(void);
-int print_binary(va_list args);
-int print_unsigned(va_list args);
-int print_octal(va_list args);
-int print_hex_lower(va_list args);
-int print_hex_upper(va_list args);
-int (*get_func(char c))(va_list);
-int print_int_rec(int n);
-int print_int_digit(int d);
+void buffer_add(char *buffer, int *index, char c, int *printed);
+int buffer_flush(char *buffer, int *index);
+int handle_char(va_list args, char *buffer, int *index, int *printed);
+int handle_string(va_list args, char *buffer, int *index, int *printed);
+int handle_int(va_list args, char *buffer, int *index, int *printed);
+int handle_uint(va_list args, char *buffer, int *index, int *printed);
+int handle_octal(va_list args, char *buffer, int *index, int *printed);
+int handle_hex_lower(va_list args, char *buffer, int *index, int *printed);
+int handle_hex_upper(va_list args, char *buffer, int *index, int *printed);
+int handle_binary(va_list args, char *buffer, int *index, int *printed);
 #endif
