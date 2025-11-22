@@ -8,6 +8,7 @@ typedef struct specifier
   int (*f)(va_list, char *, int *, int *);
 } specifier_t;
 int _printf(const char *format, ...);
+int print_int_digit(int d);
 void buffer_add(char *buffer, int *index, char c, int *printed);
 int buffer_flush(char *buffer, int *index);
 int handle_char(va_list args, char *buffer, int *index, int *printed);
