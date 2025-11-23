@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
         {'x', handle_hex_lower},
         {'X', handle_hex_upper},
         {'b', handle_binary},
+	{'S', handle_S},
         {'\0', NULL}
     };
     va_list args;
