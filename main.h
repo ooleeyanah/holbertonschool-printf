@@ -11,6 +11,7 @@ int _printf(const char *format, ...);
 int print_int_digit(int d);
 void buffer_add(char *buffer, int *index, char c, int *printed);
 int buffer_flush(char *buffer, int *index);
+int print_S(char *s);
 int handle_char(va_list args, char *buffer, int *index, int *printed);
 int handle_string(va_list args, char *buffer, int *index, int *printed);
 int handle_int(va_list args, char *buffer, int *index, int *printed);
