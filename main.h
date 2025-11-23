@@ -19,5 +19,5 @@ int handle_octal(va_list args, char *buffer, int *index, int *printed);
 int handle_hex_lower(va_list args, char *buffer, int *index, int *printed);
 int handle_hex_upper(va_list args, char *buffer, int *index, int *printed);
 int handle_binary(va_list args, char *buffer, int *index, int *printed);
-void handle_S(va_list args, char *buffer, int *buf_index, int *printed);
+int handle_S(va_list args, char *buffer, int *buf_index, int *printed);
 #endif
