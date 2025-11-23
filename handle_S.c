@@ -5,8 +5,9 @@
  * @buffer: output buffer
  * @buf_index: current index in buffer
  * @printed: total printed char count
+ * Return: 0
  */
-void handle_S(va_list args, char *buffer, int *buf_index, int *printed)
+int handle_S(va_list args, char *buffer, int *buf_index, int *printed)
 {
     char *str = va_arg(args, char *);
     int i;
@@ -31,4 +32,5 @@ void handle_S(va_list args, char *buffer, int *buf_index, int *printed)
             buffer_add(buffer, buf_index, c, printed);
         }
     }
+    return 0;
 }
